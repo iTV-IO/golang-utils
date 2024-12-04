@@ -6,7 +6,7 @@ import (
 	"gorm.io/gorm"
 )
 
-func NewDatabase(conf Config) (*gorm.DB, error) {
+func Connect(conf Config) (*gorm.DB, error) {
 	switch conf.DRIVER {
 	case "mysql":
 		db := NewMysql(conf)
